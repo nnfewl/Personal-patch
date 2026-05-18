@@ -55,7 +55,7 @@ do
 	[ -d "$dropbox" ] || continue
 	for icon in blank busy busy2 idle logo x
 	do
-		rsvg-convert -w 20 -h 20 src/dropbox-tray/Papirus/dropboxstatus-${icon}.svg -o /tmp/dropboxstatus-${icon}.png
+		rsvg-convert -w 20 -h 20 src/dropbox-tray/Custom/dropboxstatus-${icon}.svg -o /tmp/dropboxstatus-${icon}.png
 		cp /tmp/dropboxstatus-${icon}.png "$dropbox/dropboxstatus-${icon}.png"
 		rm /tmp/dropboxstatus-${icon}.png
 	done
