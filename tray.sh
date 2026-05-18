@@ -48,4 +48,17 @@ sudo cp src/telegram-tray/test4/telegram22.svg /usr/share/icons/hicolor/symbolic
 sudo cp src/telegram-tray/test4/22.svg /usr/share/icons/hicolor/symbolic/apps/org.telegram.desktop-mute-symbolic.svg
 sudo cp src/telegram-tray/test4/attention22.svg /usr/share/icons/hicolor/symbolic/apps/org.telegram.desktop-attention-symbolic.svg
 
+## Dropbox - convert Papirus SVGs to PNGs and replace bundled icons
+userhome=$(eval echo ~${SUDO_USER:-$USER})
+for dropbox in /opt/dropbox/images/hicolor/16x16/status $userhome/.dropbox-dist/dropbox-lnx.*/images/hicolor/16x16/status
+do
+	[ -d "$dropbox" ] || continue
+	for icon in blank busy busy2 idle logo x
+	do
+		rsvg-convert -w 20 -h 20 src/dropbox-tray/Papirus/dropboxstatus-${icon}.svg -o /tmp/dropboxstatus-${icon}.png
+		cp /tmp/dropboxstatus-${icon}.png "$dropbox/dropboxstatus-${icon}.png"
+		rm /tmp/dropboxstatus-${icon}.png
+	done
+done
+
 echo "Done!"
