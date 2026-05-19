@@ -88,4 +88,23 @@ do
 	done
 done
 
+## Tailscale - install custom tray SVGs to icon themes
+for theme in $papirus $tela /usr/share/icons/Tela-grey-dark
+do
+	for i in 16 22 24
+	do
+		case $theme in
+			*Papirus*) dir="$theme/${i}x${i}/panel" ;;
+			*)         dir="$theme/${i}/panel" ;;
+		esac
+		[ -d "$dir" ] || continue
+		for icon in connected disconnected exit-node-online exit-node-offline
+		do
+			sudo rm -f "$dir/tailscale-${icon}.svg"
+			sudo cp src/tailscale-tray/${icon}.svg "$dir/tailscale-${icon}.svg"
+			sudo chmod 644 "$dir/tailscale-${icon}.svg"
+		done
+	done
+done
+
 echo "Done!"
