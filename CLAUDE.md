@@ -12,6 +12,7 @@ Personal icon patcher for Linux icon themes (primarily Papirus). Replaces specif
 - **`tela-app.sh`** — Same concept but targets the Tela-grey-dark icon theme instead of Papirus
 - **`tray.sh`** — Patches system tray panel icons for Slack across Papirus-Dark, Tela-grey-dark, and Tela-grey themes (indicator, unread, highlight variants at 16/22/24px)
 - **`magic.sh`** — Replaces Papirus folder/places icons with Qogir-icon-theme equivalents, patches mimetypes, and replaces symbolic icons. Requires cloning Qogir-icon-theme into a `themes/` directory first
+- **`tray-padding.sh`** — Reduces `-natural-hpadding` on GNOME Shell panel buttons for Clipboard Indicator and Rectangle extensions. Uses Python for safe patching of `extension.js`. Backs up originals to `~/.gnome-ext-backups/`
 
 ## Telegram tray icons
 

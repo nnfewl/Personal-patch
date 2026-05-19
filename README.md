@@ -10,6 +10,7 @@ Personal icon patcher for Linux icon themes. Replaces app icons, folder icons, t
 | `tela-app.sh` | Same as `app.sh` but targets Tela-grey-dark theme |
 | `tray.sh` | Patches system tray icons for Slack, Telegram, Dropbox, KeePassXC |
 | `magic.sh` | Replaces Papirus folder/places icons with Qogir equivalents, patches mimetypes |
+| `tray-padding.sh` | Reduces horizontal padding on GNOME Shell tray icons (Clipboard Indicator, Rectangle) |
 
 ## Tray icon patching (`tray.sh`)
 
@@ -34,6 +35,20 @@ Icons in `src/tailscale-tray/`:
 - `disconnected.svg` - All dots inactive
 - `exit-node-online.svg` - Connected pattern with arrow overlay
 - `exit-node-offline.svg` - Connected pattern with red X
+
+## Tray icon padding (`tray-padding.sh`)
+
+Reduces the horizontal padding (`-natural-hpadding`) on GNOME Shell panel buttons for extensions that have oversized tray icons. Patches `extension.js` directly via Python for safe multi-line insertion.
+
+Targets:
+- **Clipboard Indicator** (`clipboard-indicator@tudmotu.com`) — system-installed, requires sudo
+- **Rectangle** (`rectangle@acristoffers.me`) — user-installed
+
+Backups are saved to `~/.gnome-ext-backups/` before patching. Edit the `PADDING` variable at the top to adjust (default: `6px`, GNOME default: `12px`).
+
+```shell
+bash tray-padding.sh    # requires sudo for Clipboard Indicator
+```
 
 ## Telegram tray icons
 
