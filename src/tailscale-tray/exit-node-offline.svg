@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg
-   xmlns="http://www.w3.org/2000/svg"
-   width="22"
-   height="22"
-   viewBox="0 0 250 250"
-   version="1.1">
-  <g fill="#666666">
-    <circle cx="50" cy="50" r="25" />
-    <circle cx="125" cy="50" r="25" />
-    <circle cx="200" cy="50" r="25" />
-    <circle cx="50" cy="200" r="25" />
-    <circle cx="200" cy="200" r="25" />
-  </g>
-  <g fill="#ececec">
-    <circle cx="50" cy="125" r="25" />
-    <circle cx="125" cy="125" r="25" />
-    <circle cx="200" cy="125" r="25" />
-    <circle cx="125" cy="200" r="25" />
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 250 250" version="1.1">
+  <defs>
+    <mask id="dots-mask">
+      <rect width="250" height="250" fill="#ffffff" />
+      <rect x="100" y="100" width="150" height="150" fill="#000000" />
+    </mask>
+  </defs>
+  <g mask="url(#dots-mask)">
+    <g fill="#666666">
+      <circle cx="50" cy="50" r="25" />
+      <circle cx="125" cy="50" r="25" />
+      <circle cx="200" cy="50" r="25" />
+      <circle cx="50" cy="200" r="25" />
+      <circle cx="200" cy="200" r="25" />
+    </g>
+    <g fill="#ffffff">
+      <circle cx="50" cy="125" r="25" />
+      <circle cx="125" cy="125" r="25" />
+      <circle cx="200" cy="125" r="25" />
+      <circle cx="125" cy="200" r="25" />
+    </g>
   </g>
   <path
-     d="M 125 125 212 212 M 212 125 125 212"
+     d="M 125 125 212.5 212.5 M 125 212.5 212.5 125"
      fill="none"
      stroke="#e56f4a"
      stroke-linecap="round"
