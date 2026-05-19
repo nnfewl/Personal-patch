@@ -61,4 +61,31 @@ do
 	done
 done
 
+## KeePassXC - replace tray icons with macOS design
+for theme in /usr/share/icons/Papirus /usr/share/icons/Papirus-Light
+do
+	for i in 16 22 24
+	do
+		dir="$theme/${i}x${i}/panel"
+		[ -d "$dir" ] || continue
+		sudo rm -f "$dir/keepassxc-monochrome-light.svg"
+		sudo cp src/keepassxc-tray/keepassxc-monochrome-light.svg "$dir/keepassxc-monochrome-light.svg"
+		sudo rm -f "$dir/keepassxc-monochrome-light-locked.svg"
+		sudo cp src/keepassxc-tray/keepassxc-monochrome-light-locked.svg "$dir/keepassxc-monochrome-light-locked.svg"
+	done
+done
+## KeePassXC - Tela-grey and Tela-grey-dark
+for theme in $tela /usr/share/icons/Tela-grey-dark
+do
+	for i in 16 22 24
+	do
+		dir="$theme/${i}/panel"
+		[ -d "$dir" ] || continue
+		sudo rm -f "$dir/keepassxc-monochrome-light.svg"
+		sudo cp src/keepassxc-tray/keepassxc-monochrome-light.svg "$dir/keepassxc-monochrome-light.svg"
+		sudo rm -f "$dir/keepassxc-monochrome-light-locked.svg"
+		sudo cp src/keepassxc-tray/keepassxc-monochrome-light-locked.svg "$dir/keepassxc-monochrome-light-locked.svg"
+	done
+done
+
 echo "Done!"
