@@ -8,7 +8,7 @@ Personal icon patcher for Linux icon themes. Replaces app icons, folder icons, t
 |--------|-------------|
 | `app.sh` | Patches Papirus app icons (Slack, Telegram, VirtualBox, Chrome, Firefox, Spotify, etc.) |
 | `tela-app.sh` | Same as `app.sh` but targets Tela-grey-dark theme |
-| `tray.sh` | Patches system tray icons for Slack, Telegram, Dropbox, KeePassXC |
+| `tray.sh` | Patches system tray icons for Slack, Telegram, Dropbox, KeePassXC, Tailscale, MEGASync |
 | `magic.sh` | Replaces Papirus folder/places icons with Qogir equivalents, patches mimetypes |
 | `tray-padding.sh` | Reduces horizontal padding on GNOME Shell tray icons (Clipboard Indicator, Rectangle) |
 
@@ -21,6 +21,7 @@ Patches tray icons across Papirus-Dark, Tela-grey, and Tela-grey-dark themes:
 - **Dropbox** - Converts custom Papirus-based SVGs to PNGs, replaces bundled icons in `/opt/dropbox/` and `~/.dropbox-dist/`
 - **KeePassXC** - Replaces tray icons with macOS-style design (circle with key/lock)
 - **Tailscale** - Custom systray SVGs via patched `tailscale-systray` binary (see below)
+- **MEGASync** - Papirus-style tray icons for Tela-grey/Tela-grey-dark
 
 ```shell
 sudo bash tray.sh
