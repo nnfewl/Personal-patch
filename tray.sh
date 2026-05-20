@@ -107,4 +107,20 @@ do
 	done
 done
 
+## MEGASync - replace tray icons with Papirus versions
+for theme in $tela /usr/share/icons/Tela-grey-dark
+do
+	for i in 16 22 24
+	do
+		dir="$theme/${i}/panel"
+		[ -d "$dir" ] || continue
+		for icon in megaalert megalogging megapaused megasynching megauptodate megawarning
+		do
+			sudo rm -f "$dir/${icon}.svg"
+			sudo cp src/mega-tray/Papirus/${icon}.svg "$dir/${icon}.svg"
+			sudo chmod 644 "$dir/${icon}.svg"
+		done
+	done
+done
+
 echo "Done!"
