@@ -104,6 +104,10 @@ bash magic.sh        # Patch folders/mimetypes (requires Qogir)
 
 ![system-tray after](screenshot/system-tray.png)
 
+GNOME Shell top panel with patched monochrome tray icons on a dark background. The indicator system trays from left to right are: Telegram (paper plane), Megasync (circled M), Portmaster (shield with green status dot), Dropbox (open box), Tailscale (3x3 dot grid), Clipboard Indicator (grid of squares), and Rectangle (overlapping windows). All icons follow a consistent monochrome style matching the Papirus/Tela-grey-dark themes, with reduced horizontal padding via `tray-padding.sh`.
+
+![system-tray new](screenshot/system-tray-new.png)
+
 ## Acknowledgments
 
 * [Papirus-icon-theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
