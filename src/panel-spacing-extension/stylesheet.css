@@ -1,4 +1,0 @@
-/* Increase spacing between system tray icons (WiFi, volume, battery) */
-#panel .panel-button .panel-status-indicators-box {
-    spacing: 16px;
-}

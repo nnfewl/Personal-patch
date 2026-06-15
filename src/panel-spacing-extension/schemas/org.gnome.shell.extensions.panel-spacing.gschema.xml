@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.panel-spacing"
+          path="/org/gnome/shell/extensions/panel-spacing/">
+    <key name="icon-spacing" type="i">
+      <default>16</default>
+      <summary>Icon spacing</summary>
+      <description>Spacing in pixels between system tray icons (WiFi, volume, battery)</description>
+    </key>
+  </schema>
+</schemalist>

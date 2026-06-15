@@ -22,13 +22,13 @@ gnome-extensions enable panel-spacing@personal-patch
 
 ## Tuning
 
-Edit `stylesheet.css` and change the `spacing` value, then reload:
+Open **GNOME Extensions** app → Panel Spacing Tweak → Settings. Adjust the **Icon Spacing** spin row (0–48px). Changes apply live without reloading.
+
+Or via CLI:
 
 ```bash
-gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell \
-  --method org.gnome.Shell.Extensions.DisableExtension panel-spacing@personal-patch
-gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell \
-  --method org.gnome.Shell.Extensions.EnableExtension panel-spacing@personal-patch
+gsettings --schemadir ~/.local/share/gnome-shell/extensions/panel-spacing@personal-patch/schemas \
+  set org.gnome.shell.extensions.panel-spacing icon-spacing 20
 ```
 
 ## Uninstall
