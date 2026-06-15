@@ -1,0 +1,7 @@
+{
+    "name": "Panel Spacing Tweak",
+    "description": "Adjusts spacing between system tray icons (WiFi, volume, battery)",
+    "uuid": "panel-spacing@personal-patch",
+    "version": 1,
+    "shell-version": ["50"]
+}
