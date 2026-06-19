@@ -11,6 +11,7 @@ Personal icon patcher for Linux icon themes. Replaces app icons, folder icons, t
 | `tray.sh` | Patches system tray icons for Slack, Telegram, Dropbox, KeePassXC, Tailscale, MEGASync |
 | `magic.sh` | Replaces Papirus folder/places icons with Qogir equivalents, patches mimetypes |
 | `tray-padding.sh` | Reduces horizontal padding on GNOME Shell tray icons (Clipboard Indicator, Rectangle) |
+| `src/appindicator-spacing/install.sh` | Installs a user-local AppIndicator fork with adjustable tray icon padding |
 
 ## Tray icon patching (`tray.sh`)
 
@@ -50,6 +51,20 @@ Backups are saved to `~/.gnome-ext-backups/` before patching. Edit the `PADDING`
 ```shell
 bash tray-padding.sh    # requires sudo for Clipboard Indicator
 ```
+
+## Adjustable AppIndicator spacing
+
+`src/appindicator-spacing/` contains a GNOME Shell 50-compatible user-local fork
+of AppIndicator and KStatusNotifierItem Support. It preserves **Compact Mode**
+and adds a live **Horizontal Padding** control from 0–24px. The system extension
+under `/usr/share` is not modified.
+
+```shell
+cd src/appindicator-spacing
+bash install.sh
+```
+
+Log out and back in after installation so GNOME Shell loads the user-local copy.
 
 ## Telegram tray icons
 
