@@ -1,0 +1,8 @@
+/* Red circular close button (elementary/Arc style) for GTK 4 / libadwaita apps.
+   libadwaita draws the circle on the button's image, so style that. */
+windowcontrols > button.close > image {
+  background-color: #e0565a;
+  color: #ffffff;
+}
+windowcontrols > button.close:hover > image { background-color: #e86c70; }
+windowcontrols > button.close:active > image { background-color: #c94a4e; }

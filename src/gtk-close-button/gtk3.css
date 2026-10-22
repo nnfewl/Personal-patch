@@ -1,0 +1,15 @@
+/* Red circular close button (elementary/Arc style) for GTK 3 apps. */
+button.titlebutton.close {
+  min-width: 22px;
+  min-height: 22px;
+  padding: 0;
+  border-radius: 9999px;
+  background: #e0565a;
+  border: none;
+  box-shadow: none;
+  color: #ffffff;
+  -gtk-icon-shadow: none;
+}
+button.titlebutton.close > image { background: none; color: #ffffff; }
+button.titlebutton.close:hover { background: #e86c70; }
+button.titlebutton.close:active { background: #c94a4e; }
