@@ -12,6 +12,7 @@ Personal icon patcher for Linux icon themes. Replaces app icons, folder icons, t
 | `magic.sh` | Replaces Papirus folder/places icons with Qogir equivalents, patches mimetypes |
 | `tray-padding.sh` | Reduces horizontal padding on GNOME Shell tray icons (Clipboard Indicator, Rectangle) |
 | `src/appindicator-spacing/install.sh` | Installs a user-local AppIndicator fork with adjustable tray icon padding |
+| `reapply-gnome.sh` | Reapplies all GNOME Shell customizations at once (AppIndicator fork, Panel Spacing, Clipboard Indicator, Rectangle); idempotent |
 
 ## Tray icon patching (`tray.sh`)
 
