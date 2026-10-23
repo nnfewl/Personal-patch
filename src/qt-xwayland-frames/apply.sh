@@ -8,6 +8,7 @@ APPS=(
     org.wireshark.Wireshark.desktop
     org.telegram.desktop.desktop
     virtualbox.desktop
+    org.keepassxc.KeePassXC.desktop
 )
 SRC=/usr/share/applications
 DST="${XDG_DATA_HOME:-$HOME/.local/share}/applications"
