@@ -4,5 +4,6 @@
     "uuid": "panel-spacing@personal-patch",
     "settings-schema": "org.gnome.shell.extensions.panel-spacing",
     "version": 2,
+    "session-modes": ["user", "unlock-dialog"],
     "shell-version": ["50"]
 }
